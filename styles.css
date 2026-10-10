@@ -1,0 +1,246 @@
+:root {
+  --bg: #0e1117;
+  --panel: #171d2a;
+  --panel-alt: #1d2330;
+  --text: #edf2ff;
+  --muted: #b7c0d5;
+  --gold: #f4c95d;
+  --green: #6feaa5;
+  --red: #ff7b72;
+  --blue: #6ea8fe;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #1a2230 0%, var(--bg) 45%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero {
+  padding: 1.25rem 1.5rem 4rem;
+  background: linear-gradient(180deg, rgba(18, 23, 35, 0.92), rgba(12, 15, 22, 0.98));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 5rem auto 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.lead {
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: var(--gold);
+  color: #17130a;
+}
+
+.button.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.panel {
+  background: rgba(23, 29, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+}
+
+p {
+  color: var(--muted);
+}
+
+.spell-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.spell-card {
+  background: var(--panel-alt);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.25rem;
+}
+
+.spell-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.spell-card ul {
+  margin: 0 0 0.75rem 1.2rem;
+  padding: 0;
+  color: var(--text);
+}
+
+.spell-card li {
+  margin-bottom: 0.35rem;
+}
+
+.spell-card p {
+  margin: 0;
+}
+
+.spell-card.slime {
+  border-top: 3px solid var(--green);
+}
+
+.spell-card.zombie {
+  border-top: 3px solid var(--red);
+}
+
+.spell-card.skeleton {
+  border-top: 3px solid var(--blue);
+}
+
+.apple-box {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.apple-icon {
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, rgba(255, 214, 88, 0.2), rgba(255, 180, 0, 0.08));
+  border: 1px solid rgba(255, 214, 88, 0.25);
+  border-radius: 22px;
+}
+
+.feature-list {
+  margin: 1rem 0 0 1.25rem;
+  padding: 0;
+  color: var(--text);
+}
+
+.feature-list li {
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem 1rem 3rem;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .panel {
+    padding: 1.2rem;
+  }
+
+  .apple-box {
+    grid-template-columns: 1fr;
+  }
+}
